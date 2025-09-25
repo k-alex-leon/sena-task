@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a class="goBack" href="../index.html">Volver</a>
+    <h1>Formulario de fan</h1>
+    <div class="form-container-fan">
+      <form id="fanForm">
+        <input type="text" id="name" name="name" placeholder="Nombre" required />
+        <input type="number" id="age" name="age" placeholder="Edad" required />
+        <input type="number" id="document" name="document" placeholder="Documento" required />
+        <input
+          type="date"
+          id="birth"
+          name="birth"
+          placeholder="Fecha de nacimiento"
+          required
+        />
+        <input type="email" name="email" id="email" placeholder="Correo" required />
+        <input
+          type="text"
+          id="originCity"
+          name="originCity"
+          placeholder="Ciudad de origen"
+          required
+        />
+        <input
+          type="text"
+          id="currentCity"
+          name="currentCity"
+          placeholder="Ciudad actual"
+          required
+        />
+
+        <label for="song"
+          >Para este campo es necesario enviar 3 canciones</label
+        >
+        
+        <input type="text" id="songInput" placeholder="Cancion" />
+        <button type="button" id="addSongBtn">Agregar Cancion</button>
+        <button type="submit">Enviar Datos</button>
+      </form>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Documento</th>
+            <th>Fecha de nacimiento</th>
+            <th>Correo</th>
+            <th>Ciudad de origen</th>
+            <th>Ciudad actual</th>
+            <th>Canciones</th>
+          </tr>
+        </thead>
+        <tbody id="fanTableBody"></tbody>
+      </table>
+    </div>
+
+    <script type="module" src="/src/radioFans.js"></script>
+  </body>
+</html>

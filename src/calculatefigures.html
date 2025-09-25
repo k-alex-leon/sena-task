@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a class="goBack" href="../index.html">Volver</a>
+    <div>
+      <h1>Areas y perimetros</h1>
+      <form id="formContainer">
+        <div class="figures-container">
+          <label for="figureType">Figura:</label>
+          <select name="figureType" id="figureType">
+            <option value=""></option>
+            <option value="square">Cuadrado</option>
+            <option value="rectangle">Rectángulo</option>
+            <option value="circle">Círculo</option>
+            <option value="triangle">Triángulo</option>
+          </select>
+          <label for="calculationType">Cálculo:</label>
+          <select name="calculationType" id="calculationType">
+            <option value=""></option>
+            <option value="area">Área</option>
+            <option value="perimeter">Perímetro</option>
+          </select>
+
+          <div id="inputsContainer"></div>
+        </div>
+        <button type="submit">Calcular</button>
+      </form>
+
+      <h5 id="resultContainer">Resultado:</h5>
+    </div>
+  </body>
+  <script type="module" src="/src/calculatefigures.js"></script>
+</html>
