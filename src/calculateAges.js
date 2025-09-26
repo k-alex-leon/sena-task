@@ -40,22 +40,22 @@ function calculateAges(data) {
   data.averageAge = Math.round(
     validAges.reduce((sum, age) => sum + age, 0) / totalAges
   );
-  data.minAge = Math.min(...validAges);
+  data.minAges = validAges.filter((age) => age < 18).length;
   data.maxAge = Math.max(...validAges);
   data.olderAge = validAges.filter((age) => age > 60).length;
   data.maxAges = validAges.filter((age) => age > 60);
   console.log(data.maxAges);
-  data.minAges = validAges.filter((age) => age < 18);
+  data.minAge = Math.min(...validAges);
 }
 
 function displayAges(data) {
   document.getElementById("agesList").innerText =
-    "Edades Ingresadas:" + data.ages.filter((age) => age > 0).length ||
+    "Edades Ingresadas:" + data.ages.filter((age) => age > 0) ||
     "No se registraron edades";
   document.getElementById("averageAge").innerText =
     "Edad Promedio:" + data.averageAge || "N/A";
   document.getElementById("minAge").innerText =
-    "Menores de edad:" + data.minAge || "N/A";
+    "Menores de edad:" + data.minAges || "N/A";
   document.getElementById("maxAge").innerText =
     "Mayores de edad:" + data.maxAge || "N/A";
   document.getElementById("olderAges").innerText =
@@ -63,5 +63,5 @@ function displayAges(data) {
   document.getElementById("maxAges").innerText =
     "Edad maxima:" + data.maxAges || "None";
   document.getElementById("minAges").innerText =
-    "Edad minima:" + data.minAges || "None";
+    "Edad minima:" + data.minAge || "None";
 }
